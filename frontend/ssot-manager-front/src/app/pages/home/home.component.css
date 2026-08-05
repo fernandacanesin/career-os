@@ -1,0 +1,31 @@
+.container {
+  padding: 40px;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.usuario-card {
+  width: 350px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  padding: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.usuario-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(156, 39, 176, 0.25);
+}
+
+mat-card-title {
+  font-size: 22px;
+}
+
+mat-card-subtitle {
+  margin-top: 8px;
+  font-size: 16px;
+}
