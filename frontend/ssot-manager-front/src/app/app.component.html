@@ -1,1 +1,34 @@
-<app-home></app-home>
+<mat-toolbar color="primary">
+  SSOT Manager
+</mat-toolbar>
+
+<mat-sidenav-container class="container">
+
+  <mat-sidenav mode="side" opened>
+
+    <mat-nav-list>
+
+      <a mat-list-item>
+        Usuários
+      </a>
+
+      <a mat-list-item>
+        Formação Acadêmica
+      </a>
+
+      <a mat-list-item>
+        Experiência Profissional
+      </a>
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+
+  <mat-sidenav-content>
+
+    <app-home></app-home>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
