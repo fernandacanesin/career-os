@@ -22,4 +22,24 @@ public class UsuarioService {
     public List<Usuario> listar() {
         return usuarioRepository.findAll();
     }
+
+    public Usuario buscarPorId(Long id) {
+        return usuarioRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+    }
+
+    public Usuario atualizar(Long id, Usuario usuarioAtualizado) {
+        Usuario usuario = buscarPorId(id);
+
+        usuario.setNome(usuarioAtualizado.getNome());
+        usuario.setEmail(usuarioAtualizado.getEmail());
+        usuario.setSenha(usuarioAtualizado.getSenha());
+
+        return usuarioRepository.save(usuario);
+    }
+
+    public void deletar(Long id) {
+        Usuario usuario = buscarPorId(id);
+        usuarioRepository.delete(usuario);
+    }
 }

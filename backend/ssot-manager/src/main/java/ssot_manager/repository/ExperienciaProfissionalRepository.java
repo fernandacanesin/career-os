@@ -1,4 +1,8 @@
 package ssot_manager.repository;
 
-public class ExperienciaProfissionalRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import ssot_manager.entity.ExperienciaProfissional;
+
+public interface ExperienciaProfissionalRepository
+        extends JpaRepository<ExperienciaProfissional, Long> {
 }

@@ -3,12 +3,12 @@ package ssot_manager.dto;
 public class FormacaoAcademicaDTO {
 
     private Long id;
+    private Long usuarioId;
     private String curso;
     private String instituicao;
     private String nivel;
     private String dataInicio;
     private String dataFim;
-    private Long usuarioId;
 
     public Long getId() {
         return id;
@@ -16,6 +16,14 @@ public class FormacaoAcademicaDTO {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getUsuarioId() {
+        return usuarioId;
+    }
+
+    public void setUsuarioId(Long usuarioId) {
+        this.usuarioId = usuarioId;
     }
 
     public String getCurso() {
@@ -57,4 +65,5 @@ public class FormacaoAcademicaDTO {
     public void setDataFim(String dataFim) {
         this.dataFim = dataFim;
     }
+
 }

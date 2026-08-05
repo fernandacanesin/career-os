@@ -8,6 +8,26 @@ Content-Type: application/json
   "senha": "123456"
 }
 
+### Criar experiência profissional
+POST http://localhost:8080/experiencias
+Content-Type: application/json
+
+{
+  "empresa": "APEX Aerospace",
+  "cargo": "Shipper/Receiver",
+  "dataInicio": "2024-04",
+  "dataFim": "2025-04",
+  "descricao": "Recebimento e expedição de materiais",
+  "usuario": {
+    "id": 2
+  }
+}
+
+### Listar experiências
+GET http://localhost:8080/experiencias
+
+### Listar usuários
+GET http://localhost:8080/usuarios
 
 ### Listar usuários
 GET http://localhost:8080/usuarios
