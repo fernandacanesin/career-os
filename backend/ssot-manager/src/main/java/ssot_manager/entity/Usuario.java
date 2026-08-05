@@ -16,6 +16,21 @@ public class Usuario {
 
     private String senha;
 
+    private String telefone;
+
+private String linkedin;
+
+private String github;
+
+private String cidade;
+
+private String estado;
+
+private String pais;
+
+@Column(length = 2000)
+private String resumoProfissional;
+
     // Construtor vazio (necessário para o Spring/JPA)
     public Usuario() {
     }

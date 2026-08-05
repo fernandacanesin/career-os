@@ -18,14 +18,27 @@ public class ExperienciaProfissional {
 
     private String dataFim;
 
-    private String descricao;
+    @Column(length = 3000)
+    private String descricaoCargo;
+
+    @Column(length = 3000)
+    private String atividadesDesenvolvidas;
+
+    @Column(length = 2000)
+    private String ferramentasTecnologias;
+
+    @Column(length = 3000)
+    private String resultadosConquistas;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
+
+    // Construtor vazio (necessário para JPA)
     public ExperienciaProfissional() {
     }
+
 
     public Long getId() {
         return id;
@@ -35,6 +48,7 @@ public class ExperienciaProfissional {
         this.id = id;
     }
 
+
     public String getEmpresa() {
         return empresa;
     }
@@ -42,6 +56,7 @@ public class ExperienciaProfissional {
     public void setEmpresa(String empresa) {
         this.empresa = empresa;
     }
+
 
     public String getCargo() {
         return cargo;
@@ -51,6 +66,7 @@ public class ExperienciaProfissional {
         this.cargo = cargo;
     }
 
+
     public String getDataInicio() {
         return dataInicio;
     }
@@ -58,6 +74,7 @@ public class ExperienciaProfissional {
     public void setDataInicio(String dataInicio) {
         this.dataInicio = dataInicio;
     }
+
 
     public String getDataFim() {
         return dataFim;
@@ -67,13 +84,42 @@ public class ExperienciaProfissional {
         this.dataFim = dataFim;
     }
 
-    public String getDescricao() {
-        return descricao;
+
+    public String getDescricaoCargo() {
+        return descricaoCargo;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setDescricaoCargo(String descricaoCargo) {
+        this.descricaoCargo = descricaoCargo;
     }
+
+
+    public String getAtividadesDesenvolvidas() {
+        return atividadesDesenvolvidas;
+    }
+
+    public void setAtividadesDesenvolvidas(String atividadesDesenvolvidas) {
+        this.atividadesDesenvolvidas = atividadesDesenvolvidas;
+    }
+
+
+    public String getFerramentasTecnologias() {
+        return ferramentasTecnologias;
+    }
+
+    public void setFerramentasTecnologias(String ferramentasTecnologias) {
+        this.ferramentasTecnologias = ferramentasTecnologias;
+    }
+
+
+    public String getResultadosConquistas() {
+        return resultadosConquistas;
+    }
+
+    public void setResultadosConquistas(String resultadosConquistas) {
+        this.resultadosConquistas = resultadosConquistas;
+    }
+
 
     public Usuario getUsuario() {
         return usuario;

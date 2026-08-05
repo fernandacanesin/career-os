@@ -24,4 +24,8 @@ public class ExperienciaProfissionalService {
     public List<ExperienciaProfissional> listar() {
         return repository.findAll();
     }
-}
+
+    public void excluir(Long id) {
+        repository.deleteById(id);
+    }
+

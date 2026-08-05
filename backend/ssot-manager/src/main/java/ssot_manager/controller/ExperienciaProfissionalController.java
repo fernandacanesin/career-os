@@ -27,4 +27,9 @@ public class ExperienciaProfissionalController {
     public List<ExperienciaProfissional> listar() {
         return service.listar();
     }
-}
+
+    @DeleteMapping("/{id}")
+    public void excluir(@PathVariable Long id) {
+        service.excluir(id);
+    }
+    }
